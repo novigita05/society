@@ -75,10 +75,6 @@
                 <i class="nav-icon icon-pencil"></i> Announcement</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="activity">
-                <i class="nav-icon icon-pencil"></i> Activity</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="complaint">
                 <i class="nav-icon icon-pencil"></i> Complaint</a>
             </li>
@@ -87,7 +83,7 @@
                 <i class="nav-icon icon-pencil"></i> Community</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post">
+              <a class="nav-link" href="posting">
                 <i class="nav-icon icon-pencil"></i> Posting</a>
             </li>
             
