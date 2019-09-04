@@ -16,16 +16,16 @@
                         <div class="col-md-9 form-group has-feedback{{ $errors->has('title') ? ' has-error' : ''}}">
                           <input class="form-control" type="text" name="title" value="{{old('title')}}" placeholder="Title" autocomplete="off">
                           @if ($errors->has('title'))
-                                    <span class="help-block">
-                                        <p>{{ $errors->first('title')}}</p>
-                                    </span>
-                                @endif
+                            <span class="help-block">
+                              <p>{{ $errors->first('title')}}</p>
+                            </span>
+                          @endif
                         </div>
                       </div>
                       <div class="form-group row">
                         <label class="col-md-3 col-form-label" for="textarea-input">Content</label>
                         <div class="col-md-9 form-group has-feedback{{ $errors->has('content') ? ' has-error' : ''}}">
-                          <textarea class="form-control" value="{{old('content')}}" name="content" rows="9" placeholder="Content.." autocomplete="off"></textarea>
+                          <textarea class="form-control" value="{{old('content')}}" name="content" rows="9" placeholder="Content.." autocomplete="off" required></textarea>
                         </div>
                       </div>
                       <div class="form-group row">

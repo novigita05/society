@@ -39,11 +39,19 @@ class AnnouncementController extends Controller
     public function store(Request $request)
     {
         $this->validate(request(), [
-            'description' => 'required'
+            'title' => 'required',
+            'description' => 'required',
+            'place' => 'required',
+            'date' => 'required',
+            'time' => 'required'
         ]);
 
         DB::table('announcement')->insert([
-            'description' => $request->description
+            'title' => $request->title,
+            'description' => $request->description,
+            'place' => $request->place,
+            'date' => $request->date,
+            'time' => $request->time
         ]);
 
         return redirect('announcement');
@@ -55,7 +63,7 @@ class AnnouncementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         $announcement = Announcement::all();
 
@@ -85,7 +93,11 @@ class AnnouncementController extends Controller
     public function update(Request $request, $id)
     {
         DB::table('announcement')->where('idAnnouncement',$id)->update([
-            'description' => $request->description
+            'title' => $request->title,
+            'description' => $request->description,
+            'place' => $request->place,
+            'date' => $request->date,
+            'time' => $request->time
         ]);
 
         return redirect('/announcement');

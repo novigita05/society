@@ -45,6 +45,17 @@
                         </div>
                       </div>
                       <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input">Foto</label>
+                        <div class="col-md-9 form-group has-feedback{{ $errors->has('images') ? ' has-error' : ''}}">
+                          <input class="form-control" type="file" name="images" autocomplete="off">
+                          @if ($errors->has('images'))
+                                    <span class="help-block">
+                                        <p>{{ $errors->first('images')}}</p>
+                                    </span>
+                                @endif
+                        </div>
+                      </div>
+                      <div class="form-group row">
                         <label class="col-md-3 col-form-label" for="text-input">Tempat Lahir</label>
                         <div class="col-md-9 form-group has-feedback{{ $errors->has('place_of_birth') ? ' has-error' : ''}}">
                           <input class="form-control" type="text" name="place_of_birth" value="{{old('place_of_birth')}}" placeholder="Tempat Lahir" autocomplete="off">
@@ -86,7 +97,7 @@
                        <div class="form-group row">
                         <label class="col-md-3 col-form-label" for="text-input">Pendidikan</label>
                         <div class="col-md-9 form-group has-feedback{{ $errors->has('education') ? ' has-error' : ''}}">
-                          <input class="form-control" type="text" name="education" value="{{old('education')}}" placeholder="education" autocomplete="off">
+                          <input class="form-control" type="text" name="education" value="{{old('education')}}" placeholder="Pendidikan" autocomplete="off">
                           @if ($errors->has('education'))
                                     <span class="help-block">
                                         <p>{{ $errors->first('education')}}</p>
@@ -111,7 +122,7 @@
                           <select class="form-control" name="residence_status" autocomplete="off" required>
                             <option value="">--Pilih--</option>
                             <option value="Tetap">Tetap</option>
-                            <option value="Tidak Tetap">Tidak Tetap</option>
+                            <option value="Pindahan">Pindahan</option>
                           </select>
                         </div>
                       </div>

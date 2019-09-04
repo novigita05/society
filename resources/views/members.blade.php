@@ -6,7 +6,8 @@
               <div class="col-lg-12">
                 <div class="card">
                   <div class="card-header">
-                    <i class="fa fa-align-justify"></i> Data Warga</div>
+                    <a class="btn btn-sm btn-primary" href="{{url('/members/create')}}">Tambah Warga</a>
+                  </div>
                   <div class="card-body">
                     <table class="table table-responsive-sm table-bordered table-striped table-sm">
                       <thead>
@@ -14,6 +15,7 @@
                           <th>NIK</th>
                           <th>NO KK</th>
                           <th>Nama</th>
+                          <th>Foto</th>
                           <th>Tempat Lahir</th>
                           <th>Tanggal Lahir</th>
                           <th>Jenis Kelamin</th>
@@ -31,6 +33,7 @@
                           <td>{{ $members->nik }}</td>
                           <td>{{ $members->no_kk }}</td>
                           <td>{{ $members->name }}</td>
+                          <td><img src="{{ url('uploads/images/'.$members->images) }}" style="width: 150px; height: 150px;"> </td>
                           <td>{{ $members->place_of_birth }}</td>
                           <td>{{ $members->date_of_birth }}</td>
                           <td>{{ $members->gender }}</td>

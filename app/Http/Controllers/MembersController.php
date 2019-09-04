@@ -38,10 +38,12 @@ class MembersController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate(request(),[
             'nik' => 'required',
             'no_kk' => 'required',
             'name' => 'required',
+            'images' => 'required',
             'place_of_birth' => 'required',
             'date_of_birth' => 'required',
             'gender' => 'required',
@@ -56,6 +58,7 @@ class MembersController extends Controller
             'nik' => $request->nik,
             'no_kk' => $request->no_kk,
             'name' => $request->name,
+            'images' => $request->images,
             'place_of_birth' => $request->place_of_birth,
             'date_of_birth' => $request->date_of_birth,
             'gender' => $request->gender,
@@ -75,7 +78,7 @@ class MembersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         $members = Members::all();
 

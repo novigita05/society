@@ -76,7 +76,7 @@
                           <select class="form-control" name="residence_status" autocomplete="off" required>
                             <option value="{{ $members->residence_status}}" >{{ $members->residence_status}}</option>
                             <option value="Tetap">Tetap</option>
-                            <option value="Tidak Tetap">Tidak Tetap</option>
+                            <option value="Pindahan">Pindahan</option>
                           </select>
                         </div>
                       </div>

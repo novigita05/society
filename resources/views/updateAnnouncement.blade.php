@@ -13,11 +13,39 @@
                     action="{{ route('announcement.update', $anc->idAnnouncement) }}" method="POST">
                     {{ csrf_field() }}
                     {{method_field('PATCH')}}
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input">Judul</label>
+                        <div class="col-md-9">
+                          <input class="form-control" type="text" name="title" value="{{ $anc->title }}" autocomplete="off" required>
+                            <div class="validate"></div>
+                        </div>
+                      </div>
                       <div class="form-group row">
-                        <label class="col-md-3 col-form-label" for="textarea-input">Description</label>
+                        <label class="col-md-3 col-form-label" for="textarea-input">Deskripsi</label>
                         <div class="col-md-9">
                           <textarea class="form-control" name="description" rows="9" autocomplete="off" required>{{ $anc->description }}
                           </textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input">Tempat</label>
+                        <div class="col-md-9">
+                          <input class="form-control" type="text" name="place" value="{{ $anc->place }}" autocomplete="off" required>
+                            <div class="validate"></div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input">Tanggal</label>
+                        <div class="col-md-9">
+                          <input class="form-control" type="date" name="date" value="{{ $anc->date }}" autocomplete="off" required>
+                            <div class="validate"></div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input">Waktu</label>
+                        <div class="col-md-9">
+                          <input class="form-control" type="text" name="time" value="{{ $anc->time }}" autocomplete="off" required>
+                            <div class="validate"></div>
                         </div>
                       </div>
                       <div class="card-footer">
